@@ -4,32 +4,58 @@ namespace App\Http\Router;
 
 class Router
 {
-    protected $routes = [];
+    protected static $routes = [];
 
-    public function get($route, $controller)
+    public static function get($route, $controller)
     {
-        $this->routes['GET'][$route] = $controller;
+        self::$routes['GET'][$route] = $controller;
     }
 
-    public function post($route, $controller)
+    public static function post($route, $controller)
     {
-        $this->routes['POST'][$route] = $controller;
+        self::$routes['POST'][$route] = $controller;
     }
 
-    public function dispatch($method, $uri)
+    public static function put($route, $controller)
     {
-        if (isset($this->routes[$method][$uri])) {
-            $controller = $this->routes[$method][$uri];
-            list($class, $method) = $controller;
-            if (class_exists($class)) {
-                $controllerInstance = new $class();
-                if (method_exists($controllerInstance, $method)) {
-                    return $controllerInstance->$method();
+        self::$routes['PUT'][$route] = $controller;
+    }
+
+    public static function delete($route, $controller)
+    {
+        self::$routes['DELETE'][$route] = $controller;
+    }
+
+    public static function patch($route, $controller)
+    {
+        self::$routes['PATCH'][$route] = $controller;
+    }
+
+    public static function update($route, $controller)
+    {
+        self::$routes['UPDATE'][$route] = $controller;
+    }
+
+    public static function dispatch($method, $uri)
+    {
+        if (isset(self::$routes[$method][$uri])) {
+            $controller = self::$routes[$method][$uri];
+            if ($controller instanceof \Closure) {
+                return $controller();
+            } elseif (is_array($controller)) {
+                list($class, $method) = $controller;
+                if (class_exists($class)) {
+                    $controllerInstance = new $class();
+                    if (method_exists($controllerInstance, $method)) {
+                        return $controllerInstance->$method();
+                    } else {
+                        return '404 Not Found: Method not implemented';
+                    }
                 } else {
-                    return '404 Not Found: Method not implemented';
+                    return '404 Not Found: Class not found';
                 }
             } else {
-                return '404 Not Found: Class not found';
+                return '404 Not Found';
             }
         } else {
             return '404 Not Found';
