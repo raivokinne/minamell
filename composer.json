@@ -1,0 +1,38 @@
+{
+    "name": "raivokinne/minamell",
+    "description": "simple framework",
+    "license": "MIT",
+<<<<<<< HEAD
+=======
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "raivokinne/minamell": "^1.0"
+    },
+>>>>>>> fe40c29 (Intial Commit)
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public"
+    },
+    "config": {
+<<<<<<< HEAD
+        "process-timeout": 3000000
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+=======
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+>>>>>>> fe40c29 (Intial Commit)
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
