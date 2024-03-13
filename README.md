@@ -6,11 +6,9 @@ Hello! **Minamell** is a php framework that is based on the MVC (Model view cont
 To make a project Make sure you have [composer](https://getcomposer.org/download/) installed
 after that run this command in your terminal.
 ```
-<<<<<<< HEAD
 composer create-project raivokinne/minamell:1.x-dev example-project
 =======
 composer create-project raivokinne/minamell example-app --stability dev
->>>>>>> fe40c29 (Intial Commit)
 ```
 after that you can cd in your project and run it by using:
 ```
