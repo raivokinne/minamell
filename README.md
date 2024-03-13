@@ -7,8 +7,6 @@ To make a project Make sure you have [composer](https://getcomposer.org/download
 after that run this command in your terminal.
 ```
 composer create-project raivokinne/minamell:1.x-dev example-project
-=======
-composer create-project raivokinne/minamell example-app --stability dev
 ```
 after that you can cd in your project and run it by using:
 ```
