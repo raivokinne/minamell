@@ -29,7 +29,6 @@ class Template
             return '';
         }, $file);
 
-        // Find and process @extends directive
         if (preg_match('/@extends\([\'"]([^\'"]+)[\'"]\)/', $file, $matches)) {
             $parentTemplate = trim($matches[1]);
             $file = self::render($parentTemplate, $data);
