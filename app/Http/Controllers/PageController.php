@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Views\View;
+use App\TemplateEngine\Template;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return View::render('index', ['title' => 'Hello World'], 'layout');
+        return Template::render('index', ['title' => 'Hello World']);
     }
 }

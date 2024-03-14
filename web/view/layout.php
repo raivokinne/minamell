@@ -8,9 +8,7 @@
 </head>
 
 <body>
-    <main>
-        @content
-    </main>
+    @yield('content')
 </body>
 
 </html>

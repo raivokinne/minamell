@@ -3,9 +3,11 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../database/Database.php';
 $config = require __DIR__ . '/../config/database.php';
 
-// $db = new Database($config);
-// uncomment to test
-// $db->getConnection();
+new Database($config);
+
+use App\TemplateEngine\Template;
+
+new Template(__DIR__ . '/../web/view/');
 
 use App\Http\Router\Router;
 

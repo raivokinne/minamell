@@ -72,7 +72,7 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Router\\Router' => __DIR__ . '/../..' . '/app/Http/Router/Router.php',
-        'App\\Views\\View' => __DIR__ . '/../..' . '/app/Views/View.php',
+        'App\\TemplateEngine\\Template' => __DIR__ . '/../..' . '/app/TemplateEngine/Template.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',

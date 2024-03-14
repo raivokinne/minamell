@@ -1,1 +1,5 @@
-<h1><?php echo $title ?></h1>
+@extends('layout')
+
+@section('content')
+<h1>Hello World</h1>
+@endsection
