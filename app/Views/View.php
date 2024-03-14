@@ -7,6 +7,6 @@ class View
     static function render($view, $data = [])
     {
         extract($data);
-        require __DIR__ . '/../../view/templates/' . $view . '.php';
+        require __DIR__ . '/../../web/view/' . $view . '.php';
     }
 }

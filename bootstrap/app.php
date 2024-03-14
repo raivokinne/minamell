@@ -1,5 +1,10 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../database/Database.php';
+$config = require __DIR__ . '/../config/database.php';
+
+$db = new Database($config);
+$db->getConnection();
 
 use App\Http\Router\Router;
 

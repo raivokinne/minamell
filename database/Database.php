@@ -11,10 +11,13 @@ class Database
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function execute($stmt, $params = [])
+    public function getConnection()
     {
-        $query = $this->connection->prepare($stmt);
-        $query->execute($params);
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        return $this->connection;
+    }
+
+    public function __destruct()
+    {
+        $this->connection = null;
     }
 }
