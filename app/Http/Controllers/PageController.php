@@ -8,6 +8,6 @@ class PageController extends Controller
 {
     public function index()
     {
-        View::render('index', ["title" => "Nigga"]);
+        return View::render('index', ['title' => 'Hello World'], 'layout');
     }
 }

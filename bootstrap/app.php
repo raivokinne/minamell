@@ -3,7 +3,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../database/Database.php';
 $config = require __DIR__ . '/../config/database.php';
 
-$db = new Database($config);
+// $db = new Database($config);
 // uncomment to test
 // $db->getConnection();
 
