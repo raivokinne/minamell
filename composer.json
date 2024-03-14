@@ -2,6 +2,7 @@
     "name": "raivokinne/minamell",
     "description": "simple framework",
     "license": "MIT",
+    "version": "1.0.0",
     "require": {
         "vlucas/phpdotenv": "^5.6"
     },
