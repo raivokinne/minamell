@@ -1,6 +1,6 @@
 # CONTRIBUTING guide!
 
-Hello this is a contrubutione guide for **Minamell** namig for the commits.<br/>
+Hello this is a contribution guide for **Minamell** naming for the commits.<br/>
 
 For commits add the prefix and the message after : <br/>
 {prefix}: {message}
