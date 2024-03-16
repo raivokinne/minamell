@@ -13,7 +13,6 @@ class Database
         }
 
         $dsn = $config['driver'] . ':host=' . $config['host'] . ';port=' . $config['port'] . ';dbname=' . $config['database'];
-
         try {
             $this->connection = new \PDO($dsn, $config['username'], $config['password']);
             $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
