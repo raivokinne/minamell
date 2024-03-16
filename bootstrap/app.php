@@ -1,9 +1,23 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../database/Database.php';
-$config = require __DIR__ . '/../config/database.php';
 
-new Database($config);
+use Database\Database;
+
+$config = [];
+try {
+    $config = include "../config/database.php";
+} catch (Exception $e) {
+    die('Error loading database configuration: ' . $e->getMessage());
+}
+
+if (empty($config)) {
+    die('Database configuration is empty.');
+}
+try {
+    $database = new Database($config);
+} catch (Exception $e) {
+    die('Error creating Database instance: ' . $e->getMessage());
+}
 
 use App\TemplateEngine\Template;
 

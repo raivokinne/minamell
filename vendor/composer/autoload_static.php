@@ -30,6 +30,7 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Database\\' => 9,
         ),
         'A' => 
         array (
@@ -62,6 +63,10 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -72,9 +77,11 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Router\\Router' => __DIR__ . '/../..' . '/app/Http/Router/Router.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\TemplateEngine\\Template' => __DIR__ . '/../..' . '/app/TemplateEngine/Template.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Database\\Database' => __DIR__ . '/../..' . '/database/Database.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
         'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
         'Dotenv\\Exception\\InvalidEncodingException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidEncodingException.php',

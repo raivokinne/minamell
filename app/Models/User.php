@@ -1,9 +1,15 @@
 <?php
 
-class User
+namespace App\Models;
+
+use Database\Database;
+
+class User extends Model
 {
-    public function __construct()
+    public function getUser()
     {
-        echo 'User Model';
+        $query = "SELECT * FROM users";
+        $result = $this->connection->query($query);
+        return $result->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

@@ -41,8 +41,16 @@ class Template
 
         extract($data);
 
+        $file = preg_replace_callback('/\{\{\s*([^{}]+)\s*\}\}/', function ($matches) use ($data) {
+            $value = trim($matches[1]);
+            return isset($data[$value]) ? $data[$value] : '';
+        }, $file);
+
         ob_start();
-        eval('?>' . $file);
+        $tempFilePath = tempnam(sys_get_temp_dir(), 'tpl');
+        file_put_contents($tempFilePath, $file);
+        include $tempFilePath;
+        unlink($tempFilePath);
         return ob_get_clean();
     }
 }

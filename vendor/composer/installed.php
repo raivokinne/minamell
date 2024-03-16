@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'raivokinne/minamell',
-        'pretty_version' => '1.x-dev',
-        'version' => '1.9999999.9999999.9999999-dev',
-        'reference' => '8f6fab5ba5489cbb12de885bafecc46616576c3e',
+        'pretty_version' => '1.0.0',
+        'version' => '1.0.0.0',
+        'reference' => null,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'raivokinne/minamell' => array(
-            'pretty_version' => '1.x-dev',
-            'version' => '1.9999999.9999999.9999999-dev',
-            'reference' => '8f6fab5ba5489cbb12de885bafecc46616576c3e',
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => null,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
