@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Database\Database;
-
 class User extends Model
 {
     public function getUser()

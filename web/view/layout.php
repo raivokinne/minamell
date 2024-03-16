@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    @yield('content')
+    <main>
+        @include("index")
+    </main>
 </body>
 
 </html>

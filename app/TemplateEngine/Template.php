@@ -22,21 +22,9 @@ class Template
 
         $file = file_get_contents($path);
 
-        $file = preg_replace_callback('/@section\([\'"]([^\'"]+)[\'"]\)(.*?)@endsection/s', function ($matches) {
-            $sectionName = trim($matches[1]);
-            $sectionContent = trim($matches[2]);
-            self::$sections[$sectionName] = $sectionContent;
-            return '';
-        }, $file);
-
-        if (preg_match('/@extends\([\'"]([^\'"]+)[\'"]\)/', $file, $matches)) {
-            $parentTemplate = trim($matches[1]);
-            $file = self::render($parentTemplate, $data);
-        }
-
-        $file = preg_replace_callback('/@yield\([\'"]([^\'"]+)[\'"]\)/', function ($matches) {
-            $yieldName = trim($matches[1]);
-            return isset(self::$sections[$yieldName]) ? self::$sections[$yieldName] : '';
+        $file = preg_replace_callback('/@include\([\'"]([^\'"]+)[\'"]\)/', function ($matches) use ($data) {
+            $includeName = trim($matches[1]);
+            return self::render($includeName, $data);
         }, $file);
 
         extract($data);

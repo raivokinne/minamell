@@ -10,6 +10,6 @@ class PageController extends Controller
     public function index()
     {
         $users = (new User())->getUser();
-        return Template::render('index', ['users' => $users]);
+        return Template::render('layout', ['users' => $users]);
     }
 }
