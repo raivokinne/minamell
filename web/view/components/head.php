@@ -8,9 +8,3 @@
 </head>
 
 <body>
-    <main>
-        @include("index")
-    </main>
-</body>
-
-</html>

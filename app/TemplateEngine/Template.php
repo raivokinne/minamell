@@ -29,6 +29,30 @@ class Template
 
         extract($data);
 
+        $file = preg_replace_callback('/@foreach\((.+?) as (.+?)\)(.*?)@endforeach/s', function ($matches) use (&$data) {
+            $arrayName = $matches[1];
+            $itemName = $matches[2];
+
+            if (!isset($data[$arrayName]) || !is_array($data[$arrayName])) {
+                echo 'Array not found: ' . $arrayName;
+            }
+
+            $sectionContent = $matches[3];
+            $output = '';
+
+            foreach ($data[$arrayName] as $item) {
+                $data[$itemName] = $item;
+
+                $output .= preg_replace_callback('/\{\{\s*(.+?)\s*\}\}/', function ($matches) use ($data) {
+                    $value = trim($matches[1]);
+                    return isset($data[$value]) ? $data[$value] : '';
+                }, $sectionContent);
+            }
+
+            return $output;
+        }, $file);
+
+
         $file = preg_replace_callback('/\{\{\s*([^{}]+)\s*\}\}/', function ($matches) use ($data) {
             $value = trim($matches[1]);
             return isset($data[$value]) ? $data[$value] : '';

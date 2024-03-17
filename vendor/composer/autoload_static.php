@@ -13,6 +13,10 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Test\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -21,11 +25,16 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         ),
         'P' => 
         array (
+            'Public\\' => 7,
             'PhpOption\\' => 10,
         ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
+        ),
+        'F' => 
+        array (
+            'Framework\\' => 10,
         ),
         'D' => 
         array (
@@ -39,6 +48,10 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
     );
 
     public static $prefixDirsPsr4 = array (
+        'Test\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -51,6 +64,10 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'Public\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public',
+        ),
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
@@ -58,6 +75,10 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Framework\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/framework',
         ),
         'Dotenv\\' => 
         array (
@@ -77,6 +98,7 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Router\\Router' => __DIR__ . '/../..' . '/app/Http/Router/Router.php',
+        'App\\Models\\Model' => __DIR__ . '/../..' . '/app/Models/Model.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\TemplateEngine\\Template' => __DIR__ . '/../..' . '/app/TemplateEngine/Template.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -123,6 +145,8 @@ class ComposerStaticInita711a6abef7502d92a7b002132bd8baf
         'Dotenv\\Util\\Regex' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Util/Regex.php',
         'Dotenv\\Util\\Str' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Util/Str.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'Framework\\Controller\\BaseController' => __DIR__ . '/../..' . '/framework/Controller/BaseController.php',
+        'Framework\\View\\View' => __DIR__ . '/../..' . '/framework/View/View.php',
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',

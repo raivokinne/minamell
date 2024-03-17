@@ -4,10 +4,11 @@ namespace App\Models;
 
 class User extends Model
 {
-    public function getUser()
+    public function getUser(int $id)
     {
-        $query = "SELECT * FROM users";
-        $result = $this->connection->query($query);
-        return $result->fetchAll(\PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM users WHERE id = :id";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute(['id' => $id]);
+        return $stmt->fetch();
     }
 }
