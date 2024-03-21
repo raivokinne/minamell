@@ -1,6 +1,6 @@
 <?php
 
-namespace App\TemplateEngine;
+namespace Core\TemplateEngine;
 
 class Template
 {

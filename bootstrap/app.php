@@ -14,16 +14,16 @@ if (empty($config)) {
     die('Database configuration is empty.');
 }
 try {
-    $database = new Database($config);
+    $database = Database::connect($config);
 } catch (Exception $e) {
     die('Error creating Database instance: ' . $e->getMessage());
 }
 
-use App\TemplateEngine\Template;
+use Core\TemplateEngine\Template;
 
 new Template(__DIR__ . '/../web/view/');
 
-use App\Http\Router\Router;
+use Core\Router\Router;
 
 include __DIR__ . '/../routes/web.php';
 

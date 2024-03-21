@@ -2,28 +2,26 @@
 
 namespace Database;
 
+use PDO;
+
 class Database
 {
-    public $connection;
+    public static $connection;
 
-    public function __construct($config)
+    public static function connect($config)
     {
-        if (empty($config)) {
-            die('Database configuration is empty.');
+        if (!$config) {
+            die('config not found');
         }
 
-        $dsn = $config['driver'] . ':host=' . $config['host'] . ';port=' . $config['port'] . ';dbname=' . $config['database'];
+        $dsn = $config['driver'] . ":host=" . $config['host'] . ";dbname=" . $config['database'] . ";charset=" . $config['charset'];
+
         try {
-            $this->connection = new \PDO($dsn, $config['username'], $config['password']);
-            $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-            $this->connection->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+            self::$connection = new PDO($dsn, $config['username'], $config['password']);
+            self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return self::$connection;
         } catch (\PDOException $e) {
-            die('Connection failed: ' . $e->getMessage());
+            die($e->getMessage());
         }
-    }
-
-    public function getConnection()
-    {
-        return $this->connection;
     }
 }

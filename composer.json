@@ -11,7 +11,8 @@
             "App\\": "app/",
             "Database\\": "database/",
             "Public\\": "public/",
-            "Test\\": "tests/"
+            "Test\\": "tests/",
+            "Core\\": "core/"
         }
     },
     "scripts": {

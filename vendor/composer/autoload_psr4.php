@@ -13,8 +13,8 @@ return array(
     'Public\\' => array($baseDir . '/public'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
-    'Framework\\' => array($baseDir . '/framework'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Database\\' => array($baseDir . '/database'),
+    'Core\\' => array($baseDir . '/core'),
     'App\\' => array($baseDir . '/app'),
 );

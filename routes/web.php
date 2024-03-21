@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Router\Router;
+use Core\Router\Router;
 
 Router::get('/', function () {
     return 'Hello World';
