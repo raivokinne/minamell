@@ -2,6 +2,6 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-use Core\Crafter;
+use Minamell\Minamell\Crafter;
 $crafter = new Crafter();
 $crafter->run($argv);

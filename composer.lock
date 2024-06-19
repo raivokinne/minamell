@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11ddc2e6943eba3f1bc1fbf6a817a2c1",
+    "content-hash": "c268cfbe9ee3525f93b8a07c5de671c7",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -67,6 +67,37 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
+        },
+        {
+            "name": "minamell/minamell",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raivokinne/minamell-core.git",
+                "reference": "cc930e47482b899e0cda4a1bf2ff0f7ae72bc059"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raivokinne/minamell-core/zipball/cc930e47482b899e0cda4a1bf2ff0f7ae72bc059",
+                "reference": "cc930e47482b899e0cda4a1bf2ff0f7ae72bc059",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Minamell\\Minamell\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/raivokinne/minamell-core/issues",
+                "source": "https://github.com/raivokinne/minamell-core/tree/main"
+            },
+            "time": "2024-06-19T18:51:09+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -470,7 +501,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "minamell/minamell": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

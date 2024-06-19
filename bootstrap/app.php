@@ -2,13 +2,11 @@
 
 const BASE_PATH = __DIR__ . '/../';
 require __DIR__ . '/../vendor/autoload.php';
-require BASE_PATH . 'core/functions.php';
 $config = require BASE_PATH . 'config/database.php';
-use Core\Container;
-use Core\App;
-use Core\Migrations;
+use Minamell\Minamell\Container;
+use Minamell\Minamell\App;
 
-use Core\Database;
+use Minamell\Minamell\Database;
 
 $container = new Container();
 $container->bind(Database::class, function () {
@@ -18,6 +16,4 @@ $container->bind(Database::class, function () {
 });
 
 App::setContainer($container);
-
-Migrations::up();
 

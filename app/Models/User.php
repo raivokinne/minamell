@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Core\Model;
+use Minamell\Minamell\Model;
 
 class User extends Model
 {

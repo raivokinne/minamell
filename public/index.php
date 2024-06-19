@@ -1,12 +1,11 @@
 <?php
-// public/index.php
 
 session_start();
 require __DIR__ . '/../bootstrap/app.php';
 
-use Core\ValidationException;
-use Core\Session;
-use Core\Router;
+use Minamell\Minamell\ValidationException;
+use Minamell\Minamell\Session;
+use Minamell\Minamell\Router;
 
 $router = new Router();
 include __DIR__ . '/../routes/web.php';
