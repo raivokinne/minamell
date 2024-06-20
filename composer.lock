@@ -74,12 +74,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/raivokinne/minamell-core.git",
-                "reference": "8341700567a616033bb7c1efc47c4fe086dcba3a"
+                "reference": "e09a1875ecf13aeafe92cf684bf634cc4fe066f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raivokinne/minamell-core/zipball/8341700567a616033bb7c1efc47c4fe086dcba3a",
-                "reference": "8341700567a616033bb7c1efc47c4fe086dcba3a",
+                "url": "https://api.github.com/repos/raivokinne/minamell-core/zipball/e09a1875ecf13aeafe92cf684bf634cc4fe066f4",
+                "reference": "e09a1875ecf13aeafe92cf684bf634cc4fe066f4",
                 "shasum": ""
             },
             "default-branch": true,
@@ -97,7 +97,7 @@
                 "issues": "https://github.com/raivokinne/minamell-core/issues",
                 "source": "https://github.com/raivokinne/minamell-core/tree/main"
             },
-            "time": "2024-06-20T07:06:07+00:00"
+            "time": "2024-06-20T17:11:49+00:00"
         },
         {
             "name": "phpoption/phpoption",
