@@ -3,6 +3,7 @@
 session_start();
 require __DIR__ . '/../bootstrap/app.php';
 
+use Minamell\Minamell\Functions\Functions;
 use Minamell\Minamell\ValidationException;
 use Minamell\Minamell\Session;
 use Minamell\Minamell\Router;
@@ -19,7 +20,7 @@ try {
     Session::flash('errors', $exception->errors);
     Session::flash('old', $exception->old);
 
-    return redirect($router->previousUrl());
+    return Functions::redirect($router->previousUrl());
 }
 
 Session::unflash();
